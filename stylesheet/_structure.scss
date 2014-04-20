@@ -1,5 +1,7 @@
+
 body {
 	background: $green;
+	font-family: sans-serif;
 }
 
 section#main {
@@ -15,6 +17,18 @@ section#main {
 		right: 0;
 		margin: auto;
 	
+	}
+
+}
+
+section.portfolio {
+
+	&:nth-of-type(even) {
+		background: $white;
+	}
+
+	&:nth-of-type(odd) {
+		background-color: whitesmoke;
 	}
 
 }

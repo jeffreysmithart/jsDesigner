@@ -1,15 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta charset="UTF-8">
 	<title>Jeffrey Smith Designer</title>
 	<link rel="stylesheet" href="stylesheet/app.css">
 	<link rel="stylesheet" href="">
 </head>
 <body>
+	<nav>
+		<a href="#" class="menu-button" id="menuButton">
+			    <span class="burger-icon"></span>
+			    <p id="menuBoxP" data-text-swap="CLOSE">MENU</p>
+			</a>
+			<div id="menuBox" class="menu-box">
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">portfolio</a></li>
+					<li><a href="#">about</a></li>
+				</ul>
+
+		</div>
+	</nav>
+
 	<div class="content-wrapper">
 		<section id="main">
+			
 			<img src="img/logo.png" alt="">
+		</section>
+		<section class="portfolio">
+			
+		</section>
+		<section class="portfolio">
+			
+		</section>
+		<section class="portfolio">
+			
+		</section>
+		<section class="portfolio">
+			
+		</section>
+		<section class="portfolio">
+			
 		</section>
 	</div>
 <script src="js/jquery.min.js"></script>
@@ -17,11 +49,38 @@
 //resize the #main to match the size of the window.
 	function windowHeight(){
 		var wHeight = $(window).height();
-		$("#main").css('height', wHeight);		
+		$("#main").css('height', wHeight);	
+		$(".portfolio").css('height', wHeight);		
 	};
 
 $(document).ready(windowHeight);
 $(window).resize(windowHeight);
+</script>
+<script>
+var menuButton = document.getElementById('menuButton');
+menuButton.addEventListener('click', function (e) {
+    menuButton.classList.toggle('is-active');
+    e.preventDefault();
+});
+
+var menuBox = document.getElementById('menuBox');
+menuButton.addEventListener('click', function() { 
+	menuBox.classList.toggle('active');
+
+});
+
+
+
+var menuText = document.getElementById("menuBoxP");
+menuButton.addEventListener('click', function() {
+  if (menuText.getAttribute("data-text-swap") == menuText.innerHTML) {
+    menuText.innerHTML = menuText.getAttribute("data-text-original");
+  } else {
+    menuText.setAttribute("data-text-original", menuText.innerHTML);
+    menuText.innerHTML = menuText.getAttribute("data-text-swap");
+  }
+}, false);
+
 </script>
 
 </body>
