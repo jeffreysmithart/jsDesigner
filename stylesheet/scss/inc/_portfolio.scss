@@ -1,0 +1,120 @@
+#header {
+	background: $green;
+	height: 80vh;
+}
+
+.portfolio__img {
+
+	div.img__outer__wrapper {
+		background: $light-gray;
+		padding: rem-calc(30) rem-calc(5) rem-calc(5);
+		overflow: auto;
+		border-radius: rem-calc(3);
+		-webkit-box-shadow: 0 2px 3px rgba(50,50,50,.3);
+		-moz-box-shadow: 0 2px 3px rgba(50,50,50,.3);
+		box-shadow: 0 2px 3px rgba(50,50,50,.3);
+		max-width: rem-calc(410);
+		
+
+
+		div.img__url__bar {
+			background: $super-light-gray;
+			height: rem-calc(15);
+			margin-top: rem-calc(-10);
+			margin-bottom: rem-calc(10);
+			margin-right: rem-calc(10);
+			float: right;
+			width: 75%;
+			display: inline-block;
+			border-radius: rem-calc(2);
+
+			
+		}
+		
+		.browser {
+			z-index: 10;
+			position: relative;
+		}
+		.indicators {
+			float: left;
+			overflow: auto;
+			position: absolute;
+			top: rem-calc(-24);
+			left: rem-calc(10);
+		}
+
+		.circle {
+				width: rem-calc(15);
+				height: rem-calc(15);
+				border-radius: 50%;
+				float: left;
+				margin-right: rem-calc(5);
+				background: $super-light-gray;
+
+				&:first-of-type {
+					background: desaturate($red, 20);
+				}
+
+				&:nth-of-type(2) {
+					background: desaturate($yellow,20);
+				}
+
+				&:nth-of-type(3) {
+					background: desaturate($dark-green, 20);
+				}
+				
+			}
+
+		.img__inner__wrapper {
+			clear: right;
+			height: 400px;
+			overflow: scroll;
+		}
+
+		img {
+			height: auto;
+			//width: 100%;
+			border-radius: rem-calc(3);
+		}
+
+	}
+
+
+}
+
+
+.portfolio__description {
+
+	h2 {
+		line-height: 1;
+	}
+
+	h3 {
+		@include zona--regular;
+		text-transform: uppercase;
+		font-size: rem-calc(21);
+	}
+
+	p {
+
+		&:last-of-type {
+			margin-top: 2rem;
+		}
+	}
+
+	a {
+		margin-top: 1rem;
+		padding: .5rem 1rem;
+		border: 2px solid $green;
+		border-radius: rem-calc(5);
+		font-family: 'zona pro', sans-serif;
+		letter-spacing: .5px;
+		@include transition;
+
+		&:hover {
+			color: $green;
+			@include transition;
+
+		}
+	}
+}

@@ -1,0 +1,101 @@
+div.eclipse {
+	background: $offwhite;
+	background: url('../img/eclipse_background.png');
+	background-size: cover;
+
+	blockquote {
+		font-size: 2rem;
+		@include crimson;
+
+	}
+
+	.eclipse__img__wrapper {
+		padding-top: 1rem;
+
+		img {
+
+			max-width: 50%;
+			float: left;
+
+		}
+	}
+
+	section#header__box {
+		
+		overflow: visible;
+		text-align: center;
+
+		img {
+			margin-top: 6rem;
+			margin-bottom: 4rem;
+		}
+	}
+	#top.portfolio__item {
+		background: $light-purple;
+		color: $offwhite;	
+	}
+
+	.portfolio__item {
+
+		h3 {
+			text-align: center;
+			margin-top: 1rem;
+			font-size: 3rem;
+			@include crimson;
+			color: $gray;
+
+		}
+
+
+		.top {
+		
+		}
+
+		.portfolio__item__text {
+			p {
+				font-size: 1.5rem;
+				font-weight: 300;
+				@include open;
+				
+			}
+		}
+
+
+		.portfolio__item__content {
+			@include open;
+
+			p {
+				font-size: 1.5rem;
+				font-weight: 300;
+				@include open;
+			}
+
+			
+
+			img {
+				@include box-shadow;
+				border-radius: rem-calc(2);
+				display: block;
+				margin: 0 auto 1rem;
+			}
+		}
+	}
+	.portfolio__item__img {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	#ipad {
+		box-shadow: none;
+	}
+
+	.portfolio__item__button {
+		@include border-button(2rem, 1rem);
+		text-align: center;
+		font-size: 2rem;
+	}
+	.portfolio__img div.img__outer__wrapper {
+		max-width: rem-calc(610);
+	}
+
+}

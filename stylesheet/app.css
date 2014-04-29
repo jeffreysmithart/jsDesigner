@@ -96,9 +96,17 @@ section.portfolio:nth-of-type(odd) {
   top: 0;
   right: 0;
   z-index: 100; }
+  .menu-button a p {
+    -webkit-transition: all 200ms ease-in;
+    transition: all 200ms ease-in; }
+    .menu-button a p:hover {
+      -webkit-transition: all 200ms ease-in;
+      transition: all 200ms ease-in; }
   .menu-button p {
     text-align: center;
-    margin-top: 1.5em; }
+    margin-top: 1.5em;
+    -webkit-transition: all 200ms ease-in;
+    transition: all 200ms ease-in; }
 
 .burger-icon {
   position: relative;
@@ -148,7 +156,12 @@ section.portfolio:nth-of-type(odd) {
   .menu-box a {
     color: #2d2d2d;
     font-weight: 100;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: all 200ms ease-in;
+    transition: all 200ms ease-in; }
+    .menu-box a:hover {
+      -webkit-transition: all 200ms ease-in;
+      transition: all 200ms ease-in; }
 
 .active {
   width: 225px;

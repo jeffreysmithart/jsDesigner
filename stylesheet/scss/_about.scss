@@ -1,0 +1,70 @@
+.about {
+	background: $about-gray;
+
+
+	
+	#head__box {
+		background: url('../img/jeffrey.png') no-repeat top left;
+		background-size: cover;
+		height: 100vh;
+		min-height: rem-calc(400);
+
+		@media #{$medium-up} {
+			background-attachment: fixed;
+		}
+		.head__inner {
+			padding-top:4rem;
+		}
+
+		h1 {
+			@include zona--semibold;
+			
+			line-height: .9;
+			font-size: rem-calc(50);
+			color: darken($about-gray, 30);
+
+			&:first-of-type {
+				padding-top: 0;
+				margin-top: 0;
+			}
+
+			&:last-of-type {
+				//margin-left: rem-calc(18);
+				//margin-top: rem-calc(-12);
+				margin-bottom: 0;
+			}
+
+			@media only screen and (max-width: rem-calc(680)) {
+				font-size: rem-calc(40);
+			}
+		}
+
+		h4 {
+			font-size: 2.4rem;
+			color: darken($about-gray, 30);
+			@include zona--semibold;
+			margin-bottom: 0;
+			margin-left: rem-calc(18);
+			line-height: 1.2;
+
+			@media only screen and (max-width: rem-calc(680)) {
+				font-size: rem-calc(28);
+			}
+		}
+
+		@media #{$medium-up} {
+
+			background-size: contain;
+		}
+
+
+	}
+
+	#about__box {
+		background: $offwhite;
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+}

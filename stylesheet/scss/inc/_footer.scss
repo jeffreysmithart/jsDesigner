@@ -1,0 +1,48 @@
+footer {
+	background: $gray;
+	padding: 1rem 0;
+
+	h4 {
+	color: $white;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.25;
+	font-weight: 300;
+	
+
+	}
+
+	.footer__content {
+
+			p {
+				text-align: center;
+
+			a {
+				padding: 1rem; 
+				color: $white;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 85%;
+				border: 2px solid darken($light-gray, 25);
+				border-radius: rem-calc(5);
+				@include transition;
+				@include zona--regular;
+
+				&:hover{
+					background: $light-gray;
+					border: 2px solid $light-gray;
+					@include transition;
+					color: $gray;
+				}
+				
+			}
+		}
+	}
+
+	p.copy {
+		text-align: center;
+		color: darken($white, 30);
+		margin-bottom: 0;
+	}
+}
