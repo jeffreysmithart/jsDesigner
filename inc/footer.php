@@ -1,12 +1,12 @@
 		<footer>
 			<div class="footer__wrapper">
 				<article class="footer__content">
-					<p><a href="mailto:jeffrey@jeffreysmithdesigner.com">get in touch</a><p>
+					<p><a href="mailto:jeffrey@jeffreysmithdesigner.com"><span class=" icon-envelope"></span>Get in touch</a><p>
 					
 				</article>
 				<article class="footer__content">
 					
-					<p><a href="smithJeffreyResume.pdf.zip">download my resume</a></p>
+					<p><a href="smithJeffreyResume.pdf"><span class="icon-download"></span>Download my r&eacute;sum&eacute;</a></p>
 				</article>
 				
 			</div>

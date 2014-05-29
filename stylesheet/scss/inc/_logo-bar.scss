@@ -1,19 +1,23 @@
 	#logo-bar {
 		max-height: rem-calc(75);
 		float: left;
+		position: absolute;
+		z-index: 100;
 		
 		img {
 			margin-top: rem-calc(10);
 			margin-left: rem-calc(10);
 			max-height: 100%;
-			opacity:0.4;
-			filter:alpha(opacity=40);
+			max-height: rem-calc(75);
+			opacity:0.6;
+			filter:alpha(opacity=60);
 			@include transition;
 
 			&:hover {
 			opacity:1;
 			filter:alpha(opacity=100);
 			@include transition;
+			background: $trans-green;
 			}
 		}
 	}

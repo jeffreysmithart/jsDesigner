@@ -1,11 +1,14 @@
 div.eclipse {
 	background: $offwhite;
-	background: url('../img/eclipse_background.png');
-	background-size: cover;
+
 
 	blockquote {
 		font-size: 2rem;
 		@include crimson;
+
+		p {
+			font-size: 2rem;
+		}
 
 	}
 
@@ -19,15 +22,23 @@ div.eclipse {
 
 		}
 	}
+	.header__wrapper {
+		background-image: url('../img/eclipse_background.png');
+		background-attachment: fixed;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
 
+	}
 	section#header__box {
 		
 		overflow: visible;
 		text-align: center;
 
 		img {
-			margin-top: 6rem;
-			margin-bottom: 4rem;
+			display: block;
+			margin: 6rem auto 4rem;
+			// margin-top: 6rem;
+			// margin-bottom: 4rem;
 		}
 	}
 	#top.portfolio__item {
@@ -41,8 +52,8 @@ div.eclipse {
 			text-align: center;
 			margin-top: 1rem;
 			font-size: 3rem;
-			@include crimson;
-			color: $gray;
+			@include zona--semibold;
+			color: $light-gray;
 
 		}
 
@@ -93,9 +104,39 @@ div.eclipse {
 		@include border-button(2rem, 1rem);
 		text-align: center;
 		font-size: 2rem;
+		a {
+			width: 85%;
+			display: inline-block;
+		}
 	}
 	.portfolio__img div.img__outer__wrapper {
 		max-width: rem-calc(610);
+	}
+
+	hr {
+		border: 1px solid lighten($light-purple, 30);
+		max-width: rem-calc(400);
+		margin: 1rem auto 1.1875rem
+	}
+
+	.full-width {
+		width: 100%;
+		height: auto;
+	}
+
+	.final {
+		margin-top: .8rem;
+	}
+
+	.next {
+		background: darken($blue, 20);
+		background-image: url('../img/aura-overlay-2.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		p, h2, h4 {
+			color: $white;
+			@include text-shadow;
+		}
 	}
 
 }

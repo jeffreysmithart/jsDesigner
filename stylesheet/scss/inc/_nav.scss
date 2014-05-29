@@ -25,7 +25,7 @@
 			&:hover {
 				transition: all 200ms ease-in;
 				color: $white;
-
+				@include transition(100ms);
 				@include text-shadow;
 			}
 		}
@@ -81,10 +81,10 @@
 	}
 
 	a{
-		color: $gray;
+		//color: transparent;
 		font-weight: 100;
 		font-size: .9rem;
-		
+		padding: 0 .5rem;
 		text-decoration: none;
 		transition: all 200ms ease-in;
 		@include zona--regular;
@@ -98,7 +98,7 @@
 }
 
 .active {
-	width: 225px;
+	width: rem-calc(270);
 	height: 75px;
 	background: rgba(255,255,255, 0.65);
 	transition: all 200ms ease;
@@ -109,11 +109,13 @@
 		&:nth-of-type(2) {
 
 			a {
+				color: $gray;
+				font-size: .9rem;
 				border-left: 1px solid rgba(0,0,0, 0.2);
 				border-right: 1px solid rgba(0,0,0, 0.2);
 				-moz-background-clip: padding;
--webkit-background-clip: padding-box;
-background-clip: padding-box;
+				-webkit-background-clip: padding-box;
+				background-clip: padding-box;
 			}
 		}
 	}

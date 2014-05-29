@@ -1,7 +1,3 @@
-#header {
-	background: $green;
-	height: 80vh;
-}
 
 .portfolio__img {
 
@@ -14,17 +10,21 @@
 		-moz-box-shadow: 0 2px 3px rgba(50,50,50,.3);
 		box-shadow: 0 2px 3px rgba(50,50,50,.3);
 		max-width: rem-calc(410);
+
+		@media #{$small-only} {
+			margin: 0 auto;
+		}
 		
 
 
 		div.img__url__bar {
-			background: $super-light-gray;
+			background: darken($super-light-gray,5);
 			height: rem-calc(15);
 			margin-top: rem-calc(-10);
 			margin-bottom: rem-calc(10);
 			margin-right: rem-calc(10);
 			float: right;
-			width: 75%;
+			width: 95%;
 			display: inline-block;
 			border-radius: rem-calc(2);
 
@@ -44,23 +44,23 @@
 		}
 
 		.circle {
-				width: rem-calc(15);
-				height: rem-calc(15);
+				width: rem-calc(7);
+				height: rem-calc(7);
 				border-radius: 50%;
 				float: left;
 				margin-right: rem-calc(5);
 				background: $super-light-gray;
 
 				&:first-of-type {
-					background: desaturate($red, 20);
+					background: darken($super-light-gray, 10);
 				}
 
 				&:nth-of-type(2) {
-					background: desaturate($yellow,20);
+					background: darken($super-light-gray, 10);
 				}
 
 				&:nth-of-type(3) {
-					background: desaturate($dark-green, 20);
+					background: darken($super-light-gray, 10);
 				}
 				
 			}
@@ -68,7 +68,8 @@
 		.img__inner__wrapper {
 			clear: right;
 			height: 400px;
-			overflow: scroll;
+			overflow-y: scroll;
+			overflow-x: hidden;
 		}
 
 		img {
@@ -84,6 +85,11 @@
 
 
 .portfolio__description {
+	ul {
+		li{
+			@include open;
+		}
+	}
 
 	h2 {
 		line-height: 1;
@@ -96,9 +102,15 @@
 	}
 
 	p {
-
+		
 		&:last-of-type {
 			margin-top: 2rem;
+		}
+
+		&.skills {
+			@include open;
+			margin-bottom: 0;
+
 		}
 	}
 
@@ -109,10 +121,12 @@
 		border-radius: rem-calc(5);
 		font-family: 'zona pro', sans-serif;
 		letter-spacing: .5px;
+		color: darken($green, 15);
 		@include transition;
 
 		&:hover {
-			color: $green;
+			background: $green;
+			color: $white;
 			@include transition;
 
 		}
